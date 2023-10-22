@@ -4,10 +4,19 @@ import { generateUserToken } from "./services/token.js";
 import * as dotenv from "dotenv";
 import mongoose from "mongoose";
 import express from "express";
+import cors from "cors";
 
 // Create an instance of the express application
 const app = express();
 dotenv.config();
+
+app.use(
+  cors({
+    origin: "https://slug-panel.onrender.com",
+    headers: ["Content-Type"],
+    credentials: true,
+  })
+);
 
 // Middleware to parse incoming request data
 app.use(express.json());
