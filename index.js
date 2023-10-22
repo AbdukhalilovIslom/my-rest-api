@@ -9,10 +9,10 @@ import cors from "cors";
 // Create an instance of the express application
 const app = express();
 dotenv.config();
-
+const host = "http://localhost:3000/";
 app.use(cors());
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", host);
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,CONNECT,TRACE"
