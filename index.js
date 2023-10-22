@@ -12,7 +12,7 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: "https://slug-panel.onrender.com",
+    origin: "http://localhost:3000/",
     headers: ["Content-Type"],
     credentials: true,
   })
